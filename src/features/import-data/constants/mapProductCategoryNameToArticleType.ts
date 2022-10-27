@@ -1,0 +1,40 @@
+import { SubCategoryEnum } from 'src/shared/enums';
+import { ArticleType } from '../types';
+
+export const mapProductCategoryNameToArticleType: {
+  [key: string]: ArticleType;
+} = {
+  'T-Shirts': SubCategoryEnum.SHORT_ARMS,
+  Polos: SubCategoryEnum.SHORT_ARMS,
+  'Fußballtrikots KA': SubCategoryEnum.SHORT_ARMS,
+  Basketballtrikots: SubCategoryEnum.SHORT_ARMS,
+  Tanktop: SubCategoryEnum.SHORT_ARMS,
+  Kennzeichnungshemden: SubCategoryEnum.SHORT_ARMS,
+  Trainingsziptop: SubCategoryEnum.LONG_ARMS,
+  'Fußballtrikots LA': SubCategoryEnum.LONG_ARMS,
+  Trainingssweat: SubCategoryEnum.LONG_ARMS,
+  'Trainingsjacke mit durchgehendem RV': SubCategoryEnum.LONG_ARMS,
+  Hoodies: SubCategoryEnum.LONG_ARMS,
+  'Allwetterjacke (durchgehender RV)': SubCategoryEnum.LONG_ARMS,
+  Freizeitjacke: SubCategoryEnum.LONG_ARMS,
+  Coachjacke: SubCategoryEnum.LONG_ARMS,
+  'Sonstige Jacke': SubCategoryEnum.LONG_ARMS,
+  'Softshell-Jacken': SubCategoryEnum.LONG_ARMS,
+  Polyesterjacke: SubCategoryEnum.LONG_ARMS,
+  'Torwart Trikots': SubCategoryEnum.LONG_ARMS,
+  Fleece: SubCategoryEnum.LONG_ARMS,
+  'Basic-Sweats / Hoodys': SubCategoryEnum.LONG_ARMS,
+  'Basic-/Kapuzen-Jacke': SubCategoryEnum.LONG_ARMS,
+  'Allwettersweat/Ziptop': SubCategoryEnum.LONG_ARMS,
+  'Trainingshose Zwischenlänge': SubCategoryEnum.SHORTS,
+  'Trainingshose kurz': SubCategoryEnum.SHORTS,
+  'Basketball Hosen': SubCategoryEnum.SHORTS,
+  Fußballsporthosen: SubCategoryEnum.SHORTS,
+  'Shorts und Röcke': SubCategoryEnum.SHORTS,
+  'Trainingshose lang': SubCategoryEnum.PANTS,
+  'Torwarthosen (alle Längen)': SubCategoryEnum.PANTS,
+  'Running und Fitness Tights': SubCategoryEnum.PANTS,
+  'Indoor Hosen': SubCategoryEnum.PANTS,
+  Polyesterhose: SubCategoryEnum.PANTS,
+  'Freizeit- und Jogginghose lang': SubCategoryEnum.PANTS,
+};

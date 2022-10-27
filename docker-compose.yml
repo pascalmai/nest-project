@@ -1,0 +1,32 @@
+version: '3.9'
+services:
+  pg:
+    container_name: pg_actinium
+    image: postgres:latest
+    ports:
+      - '${DB_PORT}:5432'
+    volumes:
+      - ./db-data:/var/lib/postgres/data
+    environment:
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: '${DB_PASS}'
+
+  ftpd_server:
+    image: stilliard/pure-ftpd
+    container_name: pure-ftpd
+    ports:
+      - '${FTP_PORT}:21'
+      - '30000-30009:30000-30009'
+    volumes:
+      - ./ftp-data/data:/home/username/
+      - ./ftp-data/passwd:/etc/pure-ftpd/passwd
+    environment:
+      PUBLICHOST: ${FTP_HOST}
+      FTP_USER_NAME: ${FTP_USERNAME}
+      FTP_USER_PASS: ${FTP_PASSWORD}
+      FTP_USER_HOME: /home/username
+    restart: always
+volumes:
+  db-data:
+  ftp-data:
